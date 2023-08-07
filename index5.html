@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleheet" href="style.css">
+    <title>formularios</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(to right, rgb(38, 38, 243) , rgba(34, 129, 245, 0.87));
+      }
+      .box{
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        border-radius: 15px;
+        width: 20%;
+      }
+      fieldset{
+        border: 3px solid dodgerblue;
+      }
+      legend{
+        border: 1px solid dodgerblue;
+        padding: 10px;
+        text-align: center;
+        background-color: dodgerblue;
+        border-radius: 5px;
+        
+      }
+      .inputbox{
+        position: relative;
+      }
+      .inputuser{
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        letter-spacing: 2px;
+
+      }
+      .labelinput{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+        transition: .5s;
+      }
+      .inputuser:focus ~ .labelinput, .inputuser:valid ~ .labelinput{
+        top:-20px;
+        font-size: 12px;
+        color: dodgerblue;
+
+        
+      }
+      #data_nascimento{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 15px;
+      }
+     
+    </style>
+    
+</head>
+        
+<body> 
+  <div class="box">
+    <form action="">
+      <fieldset>
+        <legend><b>preencha sua conta</b></legend>
+        <div class="inputbox">
+          <input type="text" name="nome" id="nome" class="inputuser" required>
+          <label  for="nome" class="labelinput">nome-completo</label>
+        </div>
+        <br>
+  
+        <div class="inputbox">
+          <input type="email" name="email" id="email" class="inputuser" required>
+          <label for="email" class="labelinput">email</label>
+        </div>
+        <br>
+  
+        <div class="inputbox">
+          <input type="password" name="senha" id="senha" class="inputuser" required>
+          <label for="senha" class="labelinput">senha</label>
+
+          <p>contato:</p>
+          <div class="inputbox">
+
+            <label for="facebook">facebook</label>
+             <input type="radio" id="facebook" name="contato"  value="facebook" required="true"/>
+             <br>
+      
+               <label for="instragram">instagram</label>
+               <input type="radio" id="instragram" name="contato"  value="instragram" required="true"/>
+               <br>
+      
+               <label for="telefone">telefone</label>
+               <input type="radio" id="telefone" name="contato"  value="telefone" required="true"/>
+               <br>
+          </div>
+             <br>
+             
+               <label for="data-nascimento"><b>data-nascimento</b></label>
+               <input type="date" name="data-nascimento" id="data-nascimento"  required="true"/>
+            <br>
+            <br>
+            <div class="inputbox">
+              <input type="text" name="nome" id="nome" class="inputuser" required>
+              <label  for="cidade" class="labelinput">cidade</label>
+            </div>
+
+                 
+           <br>
+           
+               <div class="inputbox">
+                 <input type="text" name="nome" id="nome" class="inputuser" required>
+                <label for="estado" class="labelinput">estado</label>
+         </div>
+         <br>
+             <div class="inputbox">
+               <input type="text" name="end" id="end" class="inputuser" required="true"/>
+               <label for="end" class="labelinput">endereço</label>
+             </div>
+             <br>        
+       <input type="submit" name="submit" id="sumit">     
+      </fieldset>
+    </form>    
+    </div>
+
+  </div>
+
+</body>
+</html>
+
